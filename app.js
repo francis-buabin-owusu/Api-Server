@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.get("/", (req, res) => {
   // res.json({ message: "API is Online!" });
-  res.send('API is Online!')
+  res.send("API is Online!");
 });
 
 countries = [
@@ -66,10 +66,10 @@ app.get("/names", (req, res) => {
 });
 
 app.get("/todos", (req, res) => {
-    res.json({ data: todos });
-  });
+  res.json({ data: todos });
+});
 
 app.get;
 app.listen(port);
 console.log("Listening on port " + port);
-module.exports = app
+module.exports = app;
