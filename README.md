@@ -10,7 +10,7 @@ $ npm install
 ```
 3. Run 
 ```sh
-$ npm test 
+$ npm test
 ```
 
 # How to interact with APIs Endpoints locally 
