@@ -22,3 +22,13 @@ $ npm test
 
 ### Names
 `http://127.0.0.1:3000/names`
+
+# How run docker image
+ 1. Run 
+```sh
+$ docker pull cyrilbaah/api-server:latest
+```
+ 2. Run 
+```sh
+$ docker run -dp 3000:3000 cyrilbaah/api-server:latest
+```
