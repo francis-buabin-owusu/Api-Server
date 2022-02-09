@@ -8,6 +8,10 @@ This a simple API made with Express, Node.js.
 ```sh
 $ npm install 
 ```
+3. Run 
+```sh
+$ npm test 
+```
 
 # How to interact with APIs Endpoints locally 
 ### Countries
