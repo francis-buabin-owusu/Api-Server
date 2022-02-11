@@ -5,6 +5,7 @@ on:
     branches:
       - dev
 
+
 jobs:
   deploy:
     name: Deploy
@@ -46,14 +47,14 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: 
+        task-definition: .aws/task-definition.json
         container-name: api-server
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
-        task-definition: task-definition.json
+        task-definition: .aws/task-definition.json
         service: api-server-service
         cluster: api-server-cluster
         wait-for-service-stability: true
