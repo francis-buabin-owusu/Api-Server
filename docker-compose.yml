@@ -7,47 +7,47 @@ volumes:
     grafana_data: {}
 services:
   # Prometheus
-  # prometheus:
-  #   image: prom/prometheus:v2.20.1
-  #   container_name: prometheus
-  #   volumes:
-  #     - ./ops/prometheus:/etc/prometheus
-  #     - prometheus_data:/prometheus
-  #   ports:
-  #     - 9090:9090
-  #   expose:
-  #     - 9090
-  #   networks:
-  #     - monitoring
+  prometheus:
+    image: prom/prometheus:v2.20.1
+    container_name: prometheus
+    volumes:
+      - ./ops/prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    ports:
+      - 9090:9090
+    expose:
+      - 9090
+    networks:
+      - monitoring
 
-  # # Grafana
-  # grafana:
-  #   image: grafana/grafana:7.1.5
-  #   container_name: grafana
-  #   volumes:
-  #     - grafana_data:/var/lib/grafana
-  #     - ./grafana/provisioning:/etc/grafana/provisioning
-  #   environment:
-  #     - GF_AUTH_DISABLE_LOGIN_FORM=true
-  #     - GF_AUTH_ANONYMOUS_ENABLED=true
-  #     - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
-  #   ports:
-  #     - 3000:3000
-  #   expose:
-  #     - 3000
-  #   networks:
-  #     - monitoring
+  # Grafana
+  grafana:
+    image: grafana/grafana:7.1.5
+    container_name: grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    environment:
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+    networks:
+      - monitoring
 
-  # # Node Exporter
-  # node_exporter:
-  #   image: quay.io/prometheus/node-exporter:latest
-  #   container_name: api-server
-  #   command:
-  #     - '--path.rootfs=/host'
-  #   pid: host
-  #   restart: unless-stopped
-  #   volumes:
-  #     - '/:/host:ro,rslave'
+  # Node Exporter
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: api-server
+    command:
+      - '--path.rootfs=/host'
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
   api-server:
     build:
       context: .
