@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: k8s-web
-        image: cyril.baah/api-server
+        image: cyrilbaah/api-server
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 4000
+        - containerPort: 3000
