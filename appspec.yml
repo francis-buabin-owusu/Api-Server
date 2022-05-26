@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/project/Api-Server
+hooks:
+  BeforeInstall:
+    - location: deploy-scripts/before-install.sh
+      timeout: 500
+  AfterInstall:
+    - location: deploy-scripts/after-install.sh
+      timeout: 500
+  ApplicationStart:
+    - location: deploy-scripts/boot.sh
+      timeout: 500
+
