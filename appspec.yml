@@ -5,12 +5,12 @@ files:
     destination: /home/project/Api-Server
 hooks:
   BeforeInstall:
-    - location: scripts/before-install.sh
+    - location: deploy-scripts/before-install.sh
       timeout: 500
   AfterInstall:
-    - location: scripts/after-install.sh
-      timeout: 420
+    - location: deploy-scripts/after-install.sh
+      timeout: 500
   ApplicationStart:
-    - location: scripts/boot.sh
-      timeout: 5000
+    - location: deploy-scripts/boot.sh
+      timeout: 500
 
