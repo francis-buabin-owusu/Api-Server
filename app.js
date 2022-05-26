@@ -24,6 +24,10 @@ countries = [
     id: 4,
     name: "Canada",
   },
+  {
+    id: 5,
+    name: "South Africa",
+  },
 ];
 
 names = [
