@@ -1,2 +1,2 @@
 cd /home/project/Api-Server &&
-docker-compose up -d
+sudo docker-compose up -d

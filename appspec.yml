@@ -6,11 +6,11 @@ files:
 hooks:
   BeforeInstall:
     - location: deploy-scripts/before-install.sh
-      timeout: 500
+      timeout: 180
   AfterInstall:
     - location: deploy-scripts/after-install.sh
-      timeout: 500
+      timeout: 180
   ApplicationStart:
     - location: deploy-scripts/boot.sh
-      timeout: 500
+      timeout: 180
 

@@ -1,2 +1,2 @@
 cd /home/project/Api-Server &&
-docker-compose build --no-cache
+sudo docker-compose build --no-cache
