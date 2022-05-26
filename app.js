@@ -20,6 +20,10 @@ countries = [
     id: 3,
     name: "Scotland",
   },
+  {
+    id: 4,
+    name: "Canada",
+  },
 ];
 
 names = [
