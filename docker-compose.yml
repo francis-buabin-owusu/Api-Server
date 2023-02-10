@@ -52,8 +52,8 @@ services:
     build:
       context: .
     ports:
-      - 4000:4000
+      - 4000:3000
     expose:
-      - 4000
+      - 3000
     networks:
       - monitoring
