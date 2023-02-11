@@ -27,8 +27,7 @@ resource "aws_instance" "example" {
       "git config --global user.email \"<email>\"",
       "echo \"https://${local.git_username}:${local.git_password}@github.com\" > ~/.git-credentials",
       "sudo git clone https://github.com/CyrilBaah/Api-Server.git",
-      "cd Api-server",
-      "sudo git checkout terraform",
+      "cd Api-Server",
       "docker build -t api-server .",
       "docker run -p 3000:3000 api-server &"
     ]
