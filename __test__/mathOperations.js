@@ -1,10 +1,10 @@
-const request = require("supertest");
-const app = require("../app.js");
-const expect = require("chai").expect;
+const expect = require('chai').expect;
+const { describe, it } = require('mocha');
 
-describe("Our application", function () {
-  it("should understand basic mathematical principles", function () {
-    expect(5).to.equal(5);
-    expect(5).to.not.equal(3);
-  });
+
+describe('Our application', function () {
+	it('should understand basic mathematical principles', function () {
+		expect(5).to.equal(5);
+		expect(5).to.not.equal(3);
+	});
 });
