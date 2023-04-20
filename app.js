@@ -4,9 +4,9 @@ require('dotenv').config();
 
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-	// res.json({ message: "API is Online!" });
-	res.send('API is Online!');
+app.get("/", (req, res) => {
+  // res.json({ message: "API is Online!" });
+  res.send("API is Online!");
 });
 
 const countries = [
@@ -67,11 +67,13 @@ app.get('/names', (req, res) => {
 	res.json({ data: names });
 });
 
-app.get('/todos', (req, res) => {
-	res.json({ data: todos });
+app.get("/todos", (req, res) => {
+  res.json({ data: todos });
 });
 
 app.get;
 app.listen(port);
-console.log('Listening on port ' + port);
+
+console.log("Listening on port " + port);
+
 module.exports = app;

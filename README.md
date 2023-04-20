@@ -8,6 +8,10 @@ This a simple API made with Express, Node.js.
 ```sh
 $ npm install 
 ```
+3. Run 
+```sh
+$ npm test
+```
 
 # How to interact with APIs Endpoints locally 
 ### Countries
@@ -18,3 +22,13 @@ $ npm install
 
 ### Names
 `http://127.0.0.1:3000/names`
+
+# How run docker image
+ 1. Run 
+```sh
+$ docker pull cyrilbaah/api-server:latest
+```
+ 2. Run 
+```sh
+$ docker run -dp 3000:3000 cyrilbaah/api-server:latest
+```
