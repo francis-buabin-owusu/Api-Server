@@ -1,9 +1,9 @@
-const expect = require('chai').expect;
-const { describe, it } = require('mocha');
+const expect = require("chai").expect;
+const { describe, it } = require("mocha");
 
 
-describe('Our application', function () {
-	it('should understand basic mathematical principles', function () {
+describe("Our application", function () {
+	it("should understand basic mathematical principles", function () {
 		expect(5).to.equal(5);
 		expect(5).to.not.equal(3);
 	});
