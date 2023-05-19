@@ -1,5 +1,12 @@
 
 
+## [1.8.1](https://github.com/francis-buabin-owusu/Api-Server/compare/1.8.0...1.8.1) (2023-05-19)
+
+
+### Bug Fixes
+
+* made a bug fix ([6b75d59](https://github.com/francis-buabin-owusu/Api-Server/commit/6b75d59204b9770bd9518b0c3b97983dd433715e))
+
 ## [1.8.0](https://github.com/francis-buabin-owusu/Api-Server/compare/1.7.0...1.8.0) (2023-05-19)
 
 
