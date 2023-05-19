@@ -63,7 +63,8 @@ app.get("/countries", (req, res) => {
 	res.json({ data: countries });
 });
 
-app.get("/names", (req, res) => {
+app.get('/names', (req, res) => {
+    
 	res.json({ data: names });
 });
 
