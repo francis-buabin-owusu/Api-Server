@@ -30,4 +30,4 @@ jobs:
         env:
           RELEASE_VERSION: ${{ github.ref }}
           RELEASE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run release
+        run: npx release-it
